@@ -1,24 +1,21 @@
 import React from 'react';
 
+import styles  from "../../assets/landing.module.css";
+
+const API_URL = import.meta.env.VITE_API;
+
 const Landing: React.FC = () => {
-  const handleLogin = () => {
+  const handleLogin = async () => {
+    window.location.href = `${API_URL}/login`;
   };
 
   return (
-    <button onClick={handleLogin} style={buttonStyle}>
-      Login to Spotify
-    </button>
+    <div className={styles['container']}>
+      <button onClick={handleLogin} className={styles['login-button']}>
+        Login to Spotify
+      </button>
+    </div>
   );
-};
-
-const buttonStyle: React.CSSProperties = {
-  padding: '10px 20px',
-  backgroundColor: '#1DB954',
-  color: 'white',
-  border: 'none',
-  borderRadius: '25px',
-  cursor: 'pointer',
-  fontSize: '16px',
 };
 
 export default Landing;
