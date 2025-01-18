@@ -9,7 +9,6 @@ const getMeInformation = async (accessToken: string) => {
     });
     return response.data;
   } catch (error) {
-    console.error('Error fetching user information:', error);
     throw error;
   }
 };

@@ -73,7 +73,6 @@ const SpotifyStats: React.FC = () => {
           (item: any) => item.genres
         );
         const uniqueGenres: string[] = Array.from(new Set(genres)).slice(0, 10);
-        console.log(result.items);
         setData(
           uniqueGenres.map((genre, index) => ({
             id: `${genre}-${index}`,
@@ -93,7 +92,6 @@ const SpotifyStats: React.FC = () => {
         );
       }
     } catch (error) {
-      console.error("Error fetching Spotify data:", error);
     } finally {
       setLoading(false);
     }
