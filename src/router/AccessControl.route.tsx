@@ -15,11 +15,8 @@ const AccessControl: React.FC<AccessControl> = () => {
     return null;
   }
 
-  const { accessToken, isLoading } = authContext;
+  const { accessToken } = authContext;
 
-  if (isLoading) {
-    return <>loading...</>
-  }
 
   return accessToken ? <Dashboard /> : <Landing/>;
 };
