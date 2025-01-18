@@ -3,17 +3,17 @@ import { useContext } from 'react';
 import Skeleton from '@mui/material/Skeleton';
 
 import styles from '../../assets/profileCard.module.css';
-import getMeInformation from './services/getMeInformation.service';
 import { AuthContext, AuthContextType } from '../../providers/AuthContext.provider';
+import getMeInformation from './services/getMeInformation.service';
 
 const ProfileCard: React.FC = () => {
-  const { accessToken } = useContext(AuthContext) as AuthContextType;
+  const { accessToken, setAccessToken } = useContext(AuthContext) as AuthContextType;
   const [isLoading, setIsLoading] = useState(true);
   const [meInformation, setMeInformation] = useState<any>();
 
   useEffect(() => {
     const callToAPI = async () => {
-      const responseMeInformation =  await getMeInformation(accessToken as string);
+      const responseMeInformation =  await getMeInformation(accessToken as string, setAccessToken);
       setMeInformation(responseMeInformation);
       setIsLoading(false);
     }

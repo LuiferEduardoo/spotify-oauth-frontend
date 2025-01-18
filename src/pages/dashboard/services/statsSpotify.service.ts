@@ -1,10 +1,11 @@
 import authorizedRequest from './authorizedRequest .service';
 
-const getMeInformation = async (accessToken: string, setAccessToken: Function) => {
+
+const statsSpotify = async (endpoint: string, accessToken: string, setAccessToken: Function) => {
   try {
     const config = {
       method: "get",
-      url: `https://api.spotify.com/v1/me`,
+      url: endpoint,
       headers : {
         Authorization: `Bearer ${accessToken}`,
       }
@@ -16,4 +17,4 @@ const getMeInformation = async (accessToken: string, setAccessToken: Function) =
   }
 };
 
-export default getMeInformation;
+export default statsSpotify;

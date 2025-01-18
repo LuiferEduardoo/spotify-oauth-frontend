@@ -6,13 +6,14 @@ import {
   AuthContext,
   AuthContextType,
 } from "../../../providers/AuthContext.provider";
+import statsSpotify from "../services/statsSpotify.service";
 
 import SwitchView from "./SwitchView";
 import SwitchTime from "./SwitchTime";
 import CardElement from "./CardElement";
 
 const SpotifyStats: React.FC = () => {
-  const { accessToken } = useContext(AuthContext) as AuthContextType;
+  const { accessToken, setAccessToken } = useContext(AuthContext) as AuthContextType;
 
   const [viewType, setViewType] = useState<"artists" | "genres" | "tracks">(
     "artists"
@@ -52,13 +53,7 @@ const SpotifyStats: React.FC = () => {
     }
 
     try {
-      const response = await fetch(endpoint, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
-
-      const result = await response.json();
+      const result = await statsSpotify(endpoint, accessToken as string, setAccessToken);
 
       if (viewType === "artists") {
         setData(
