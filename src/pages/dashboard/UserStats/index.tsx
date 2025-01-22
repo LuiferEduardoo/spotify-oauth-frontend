@@ -61,6 +61,7 @@ const SpotifyStats: React.FC = () => {
             id: item.id,
             name: item.name,
             imageUrl: item.images[0]?.url || "",
+            url: item.external_urls.spotify,
           }))
         );
       } else if (viewType === "genres") {
@@ -83,6 +84,7 @@ const SpotifyStats: React.FC = () => {
             imageUrl: item.album.images[0]?.url || "",
             artist: item.artists.map((artist: any) => artist.name).join(", "),
             album: item.album.name,
+            url: item.external_urls.spotify,
           }))
         );
       }
