@@ -36,7 +36,7 @@ const CardElement: React.FC<propsCardElement> = ({
           <img
             src={
               item.imageUrl ||
-              "https://m.media-amazon.com/images/I/51rttY7a+9L.png"
+              "https://cdn-3.expansion.mx/dims4/default/1e4a4a6/2147483647/strip/true/crop/784x442+0+0/resize/1200x677!/format/webp/quality/60/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F50%2F87%2Fa8b460e94ae590ae960f757e6f5d%2Fgenero-musical-spotify.jpg"
             }
             alt={item.name}
             className={`w-32 h-32 ${

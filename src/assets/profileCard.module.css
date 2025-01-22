@@ -12,16 +12,6 @@
   color: white; /* Cambiar el color del texto a blanco para contraste */
 }
 
-/* Foto de perfil */
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid white; /* Borde blanco para resaltar la foto */
-  margin-bottom: 16px;
-}
-
 /* Nombre del perfil */
 .profile-name {
   font-size: 20px;
@@ -35,4 +25,40 @@
   font-size: 14px;
   color: white; /* Blanco para texto */
   line-height: 1.5;
+}
+
+.profile-container {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  line-height: 50px; /* Igual al alto para centrar verticalmente */
+  background-color: #ccc; /* Color de fondo del placeholder */
+  color: white;
+  font-size: 20px; /* Ajusta según el tamaño del contenedor */
+  font-weight: bold;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white; /* Borde blanco para resaltar la foto */
+  margin-bottom: 16px;
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #152d15; /* Cambia según tu diseño */
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
 }
