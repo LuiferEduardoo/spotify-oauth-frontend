@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Header';
 import ProfileCard from './ProfileCard';
 import UserStats from './UserStats';
+import Footer from '../../components/Footer';
 
 const Dashboard: React.FC = () => {
 
@@ -13,6 +14,7 @@ const Dashboard: React.FC = () => {
         <ProfileCard />
       </section>
       <UserStats />
+      <Footer />
     </main>
   );
 };
