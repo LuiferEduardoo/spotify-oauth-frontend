@@ -1,20 +1,16 @@
 import React from 'react';
 
-import styles  from "../../assets/landing.module.css";
-
-const API_URL = import.meta.env.VITE_API;
+import Header from './Header';
+import Main from './Main';
+import Footer from '../../components/Footer';
 
 const Landing: React.FC = () => {
-  const handleLogin = async () => {
-    window.location.href = `${API_URL}/login`;
-  };
-
   return (
-    <div className={styles['container']}>
-      <button onClick={handleLogin} className={styles['login-button']}>
-        Login to Spotify
-      </button>
-    </div>
+    <main>
+      <Header />
+      <Main />
+      <Footer />
+    </main>
   );
 };
 
