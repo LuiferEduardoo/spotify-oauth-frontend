@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="w-full bg-gray-900 text-gray-300 py-4 flex justify-center items-center">
       <p className="text-sm">
-        Made with by{" "}
+        Made by{" "}
         <a
           target="_blank"
           rel="noopener noreferrer"
