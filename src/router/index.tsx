@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import { AuthProvider } from "../providers/AuthContext.provider";
 
 import AccessControl from "./AccessControl.route";
+import Terms from "../pages/terms";
 
 
 const AppRouter: React.FC = () => {
@@ -10,6 +11,7 @@ const AppRouter: React.FC = () => {
       <Router>
         <Routes>
           <Route path="/" element={<AccessControl />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
