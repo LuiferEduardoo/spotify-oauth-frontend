@@ -3,7 +3,7 @@ import { AuthProvider } from "../providers/AuthContext.provider";
 
 import AccessControl from "./AccessControl.route";
 import Terms from "../pages/terms";
-
+import PrivacyPolicy from "../pages/privacyPolicy";
 
 const AppRouter: React.FC = () => {
   return (
@@ -12,6 +12,7 @@ const AppRouter: React.FC = () => {
         <Routes>
           <Route path="/" element={<AccessControl />} />
           <Route path="/terms" element={<Terms />} />
+           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
