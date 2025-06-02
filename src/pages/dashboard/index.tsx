@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from './Header';
+import Header from '../components/Header';
 import ProfileCard from './ProfileCard';
 import UserStats from './UserStats';
 import Footer from '../../components/Footer';
